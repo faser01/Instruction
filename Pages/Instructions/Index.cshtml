@@ -1,0 +1,16 @@
+﻿@page
+@model Instruction.Pages.Instructions.IndexModel
+@{
+    ViewData["Title"] = "Instructions";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form>
+    <label asp-for="SelectedLanguage"></label>
+    <select asp-for="SelectedLanguage" asp-items="Model.LanguageOptions"></select>
+    <input type="submit" value="Change Language" />
+</form>
+
+<h2>@Model.InstructionTitle</h2>
+<p>@Model.InstructionContent</p>
